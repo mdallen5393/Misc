@@ -1,80 +1,182 @@
-#include <stdio.h>
+#include "main.h"
+#include <sys/ioctl.h>
+size_t print_deck(const card *hand)
 
-void print_card(char *num, char *suit);
-void print_small(char *num, char *suit);
+// int main(void)
+// {
+// 	card *top = NULL;
+// 	card *new;
+// 	card ten = {"10", CLUBS, NULL, NULL};
+// 	size_t n;
 
-int main(void)
-{
+// 	top = &ten;
+// 	new = malloc(sizeof(card));
+// 	if (new == NULL)
+// 	{
+// 		dprintf(2, "Error: Can't malloc\n");
+// 		return (EXIT_FAILURE);
+// 	}
+// 	new->denom = "A";
+// 	new->suit = HEARTS;
+// 	new->next = top;
+// 	new->prev = NULL;
+// 	top = new;
+// 	n = print_cards(top);
+// 	printf("-> %lu large cards\n", n);
+// 	n = print_cards_sm(top);
+// 	printf("-> %lu small cards\n", n);
+// 	printf("-> %lu cards total\n", num_cards(top) + num_cards(top));
+// 	free(new);
+// 	return (EXIT_SUCCESS);
+// }
 
-	printf("Ace of Hearts\n");
-	print_card("A", HEARTS);
-	print_small("A", HEARTS);
-
-	printf("\nTen of Clubs\n");
-	print_card("10", CLUBS);
-	print_small("10", CLUBS);
-
-	printf("\nQueen of Spades\n");
-	print_card("Q", SPADES);
-	print_small("Q", SPADES);
-
-	printf("\nTwo of Diamonds\n");
-	print_card("2", DIAMONDS);
-	print_small("2", DIAMONDS);
-
-	return (0);
-}
-
-void print_card(char *num, char *suit)
-{
-	printf("********** \n");
-
-	if (num[1] == '0')
-		printf("* %s     * \n", num);
-	else
-		printf("* %s      * \n", num);
-	
-	printf("*        * \n");
-	printf("*        * \n");
-	printf("*   %s    * \n", suit);
-	printf("*        * \n");
-	printf("*        * \n");
-	
-	if (num[1] == '0')
-		printf("*     %s * \n", num);
-	else
-		printf("*      %s * \n", num);
-	
-	printf("********** \n");
-}
-
-void print_small(char *num, char *suit)
-{
-	printf("**** \n");
-
-	if (num[1] == '0')
-		printf("*10* \n");
-	else
-		printf("*%s * \n", num);
-	
-	printf("* %s* \n", suit);
-
-	printf("**** \n");
-}
-
-/* 
- *	printf("\u2660\n");
- *	printf("\u2663\n");
- *	printf("\u2665\n");
- *	printf("\u2666\n");
+/**
+ * @brief prints a set of cards
+ * 
+ * @param hand set of cards to print
+ * @return size_t number of cards printed
  */
+size_t print_cards(const card *hand)
+{
+	const card *temp = hand;
+	int i, numCards = 0;
 
-/* small cards
-	***
-	*A*
-	***
+	if (!temp)
+		return (0);
 
-	***
-	*A*
-	***
- */
+	while (temp)
+	{
+		printf(TL HL HL HL HL HL HL HL HL TR " ");
+		numCards++;
+		temp = temp->next;
+	}
+	printf("\n");
+
+	temp = hand;
+	while (temp)
+	{
+		if (temp->denom[1])
+			printf(VL " %s     " VL " ", temp->denom);
+		else
+			printf(VL " %s      " VL " ", temp->denom);
+
+		temp = temp->next;
+	}
+	printf("\n");
+
+	for (i = 0; i < 1; i++)
+	{
+		temp = hand;
+		while (temp)
+		{
+			printf(VL "        " VL " ");
+			temp = temp->next;
+		}
+		printf("\n");
+	}
+
+	temp = hand;
+	while (temp)
+	{
+		printf(VL "   %s    " VL " ", temp->suit);
+		temp = temp->next;
+	}
+	printf("\n");
+
+	for (i = 0; i < 1; i++)
+	{
+		temp = hand;
+		while (temp)
+		{
+			printf(VL "        " VL " ");
+			temp = temp->next;
+		}
+		printf("\n");
+	}
+
+	temp = hand;
+	while (temp)
+	{
+		if (temp->denom[1])
+			printf(VL "     %s " VL " ", temp->denom);
+		else
+			printf(VL "      %s " VL " ", temp->denom);
+		temp = temp->next;
+	}
+	printf("\n");
+
+	temp = hand;
+	while (temp)
+	{
+		printf(BL HL HL HL HL HL HL HL HL BR " ");
+		temp = temp->next;
+	}
+	printf("\n");
+
+	return (numCards);
+}
+
+size_t print_cards_sm(const card *hand)
+{
+	const card *temp = hand;
+	int i, numCards = 0;
+
+	if (!temp)
+		return (0);
+
+	while (temp)
+	{
+		printf(TL HL HL HL HL TR " ");
+		numCards++;
+		temp = temp->next;
+	}
+	printf("\n");
+
+	temp = hand;
+	while (temp)
+	{
+		if (temp->denom[1])
+			printf(VL " 10 " VL " ");
+		else
+			printf(VL " %s  " VL " ", temp->denom);
+		temp = temp->next;
+	}
+	printf("\n");
+
+	temp = hand;
+	while (temp)
+	{
+		printf(VL "  %s " VL " ", temp->suit);
+		temp = temp->next;
+	}
+	printf("\n");
+
+	temp = hand;
+	while (temp)
+	{
+		printf(BL HL HL HL HL BR " ");
+		temp = temp->next;
+	}
+	printf("\n");
+
+	return (numCards);
+}
+
+size_t num_cards(const card *hand)
+{
+	const card *temp = hand;
+	size_t numCards = 0;
+
+	while (temp)
+	{
+		numCards++;
+		temp = temp->next;
+	}
+
+	return (numCards);
+}
+
+size_t print_deck(const card *hand)
+{
+
+}

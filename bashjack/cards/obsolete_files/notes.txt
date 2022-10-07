@@ -1,0 +1,6 @@
+make hand
+print hand
+add to hand
+store cards in a linked list
+deck is just another hand
+all of it is linked list operations
