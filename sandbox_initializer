@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# This script sets up new linux/UNIX environments
+
+# Run update/upgrade
+sudo apt update
+sudo apt upgrade
+
+cd ~
+
+# Clone all git repos
+git clone https://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@github.com/mdallen5393/holbertonschool-AirBnB_clone_v2_UNSAFE.git
+git clone https://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@github.com/mdallen5393/Pointers_Live_Coding.git
+git clone https://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@github.com/mdallen5393/higher_level_programming.git
+git clone https://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@github.com/mdallen5393/Misc.git
+git clone https://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@github.com/mdallen5393/holbertonschool-AirBnB_clone.git
+git clone https://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@github.com/mdallen5393/holbertonschool-system_engineering-devops.git
+git clone https://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@github.com/mdallen5393/holberton-system_engineering-devops.git
+git clone https://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@github.com/mdallen5393/holbertonschool-monty.git
+git clone https://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@github.com/mdallen5393/holbertonschool-low_level_programming.git
+git clone https://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@github.com/mdallen5393/holbertonschool-simple_shell.git
+git clone https://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@github.com/mdallen5393/shell_prep.git
+git clone https://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@github.com/mdallen5393/holbertonschool-printf.git
+git clone https://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@github.com/mdallen5393/holbertonschool-zero_day.git
+git clone https://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@github.com/mdallen5393/zero_day.git
+git clone https://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@github.com/mdallen5393/your_first_code.git
+
+# Update bashrc
+rm ~/.bashrc
+cp ~/Misc/.bashrc .
+exec bash
+
+# Set git values
+git config --global user.email "allen_matthew@outlook.com"
+git config --global user.name "mdallen5393"
