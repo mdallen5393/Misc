@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Bash script sets up new linux/UNIX environments
+# USAGE: ./path_to_file/sandbox_initializer {token} {github username} {github email}
 
 # Run update/upgrade
-# sudo apt update
-# sudo apt upgrade
+sudo apt update
+sudo apt upgrade
 
 cd ~
 
