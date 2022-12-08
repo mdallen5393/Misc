@@ -36,3 +36,10 @@ int move(card *src, int src_idx, card *dest, int dest_idx)
 	delete_card_at_idx(&src, src_idx);
 	return (0);
 }
+
+int copy(card *src, int src_idx, card *dest, int dest_idx)
+{
+	card *selection = get_card_at_idx(src, src_idx);
+	add_card(&dest, selection->denom, selection->suit, dest_idx);
+	return (0);
+}

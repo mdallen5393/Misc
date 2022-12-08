@@ -1,6 +1,4 @@
 #include "main.h"
-#include <sys/ioctl.h>
-size_t print_deck(const card *hand)
 
 // int main(void)
 // {
@@ -178,5 +176,27 @@ size_t num_cards(const card *hand)
 
 size_t print_deck(const card *hand)
 {
+	struct winsize sz;
+	int i, j;
+	ioctl(0, TIOCGWINSZ, &sz);
+	int len = 6;
+	card *deck_row;
 
+	int cards_per_line = COLS / (len + 1);
+	int num_lines = num_cards(hand) * (len + 1) / COLS + 1;
+
+	j = 0;
+	for (i = 0; i < num_lines; i++)
+	{
+		while (j < cards_per_line)
+		{
+			add_card(&deck_row, hand->denom, hand->suit, j)
+			deck_row = deck_row->next
+		}
+		/* TODO: figure out how many cards to print*/
+		print_cards_sm(deck_row)
+	}
+
+	for (i = 0; i < num_cards(hand) - cards_per_line * num_lines; i++)
+		print_cards_sm(deck_row)
 }

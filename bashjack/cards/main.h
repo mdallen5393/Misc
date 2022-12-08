@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/ioctl.h>
+#include <signal.h>
 
 /* Macros (Suits) */
 /* Suits */
@@ -20,6 +22,10 @@
 #define TR "\u2510"
 #define BL "\u2514"
 #define BR "\u2518"
+
+/* Window Size */
+#define ROWS sz.ws_row
+#define COLS sz.ws_col
 
 /* Structs & Typedefs */
 typedef struct card_s {
@@ -40,6 +46,8 @@ void free_cards(card *top);
 card *get_card_at_idx(card *top, unsigned int index);
 int delete_card_at_idx(card **top, unsigned int index);
 int move(card *src, int src_idx, card *dest, int dest_idx);
+size_t print_deck(const card *hand);
+int copy(card *src, int src_idx, card *dest, int dest_idx);
 
 
 #endif
