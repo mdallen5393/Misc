@@ -32,69 +32,9 @@
 	background-color: white;
 }
 
-.fb-icon:before {
-	font-family: 'holberton_school-icon';
-	content: "\e908";
-	color: var(--color-white);
-}
-
-.twitter-icon:before {
-	font-family: 'holberton_school-icon';
-	content: "\e90f";
-	color: var(--color-white);
-}
-
-.insta-icon:before {
-	font-family: 'holberton_school-icon';
-	content: "\e90a";
-	color: var(--color-white);
-}
-
 .display-4 {
 	color: white;
 }
-/* 
-.leftArrow:before {
-	content: "\e903";
-	font-size: 8rem;
-}
-
-.rightArrow:before {
-	content: "\e902";
-	font-size: 8rem;
-}
-
-.leftArrowVideo:before {
-	content: '\e903';
-	font-size: 8rem;
-	color: black;
-}
-
-.rightArrowVideo {
-	background-image: url('images/arrow_black_right.png');
-	font-size: 8rem;
-	color: black;
-} */
-
-/* .carousel-control-next-icon,
-.carousel-control-prev-icon {
-    display: inline-block;
-    width: 29px;
-    height: 62px;
-    background: no-repeat 50%/100% 100%
-}
-.carousel-control-prev-icon.white {
-    background-image: url("./images/arrow_white_left.png");
-}
-.carousel-control-next-icon.white {
-    background-image: url("./images/arrow_white_right.png");
-}
-.carousel-control-prev-icon.black {
-    background-image: url("./images/arrow_black_left.png");
-}
-.carousel-control-next-icon.black {
-    background-image: url("/images/arrow_black_right.png");
-} */
 
 .loader {
     border: 10px solid #f3f3f3;
