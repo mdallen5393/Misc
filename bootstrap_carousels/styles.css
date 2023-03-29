@@ -111,22 +111,33 @@
     100% { transform: rotate(360deg); }
 }
 
-.slick-prev,
+/* .slick-prev,
 .slick-next {
   position: absolute;
   top: 50%;
   z-index: 1;
-  width: 2rem;
-  height: 2rem;
+  font-size: 2rem;
+  color: #333;
   transform: translateY(-50%);
 }
 
 .slick-prev {
-  left: -3rem;
-  background-image: url('images/arrow_black_left.png');
+  left: -2rem;
 }
 
 .slick-next {
-  right: -3rem;
-  background-image: url('images/arrow_black_right.png');
+  right: -2rem;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  content: '';
+}
+
+.slick-prev:after {
+  content: '❮';
+}
+
+.slick-next:after {
+  content: '❯';
+} */
