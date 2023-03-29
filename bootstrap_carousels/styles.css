@@ -137,10 +137,10 @@
   border: none;
 }
 
-.slick-prev:before,
+/* .slick-prev:before,
 .slick-next:before {
   
-}
+} */
 
 .slick-prev {
   left: 0;
