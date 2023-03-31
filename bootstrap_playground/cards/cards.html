@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Carousel</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+  <div class="card-group">
+    <div class="card">
+      <div class="card-img-top">
+        <img src="images/thumbnail_1.jpg" alt="Video Thumbnail">
+        <img src="images/play.png" alt="Play Button" class="play-button">
+      </div>
+      <div class="card-body" style="flex: 0 0 auto;">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer" style="flex: 1;">
+        <div class="row">
+          <img src="images/profile_1.jpg" alt="tiny profile" style="height: 20px;" class="mx-3 rounded-circle">
+          <h6 class="purple-text">Phillip Massey</h6>
+          <h6 class="purple-text">Phillip Massey</h6>
+          <h6 class="purple-text">Phillip Massey</h6>
+          <h6 class="purple-text">Phillip Massey</h6>
+        </div>
+        <!-- stars -->
+        <div class="row mx-0">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_off.png" height="15px" width="15px">
+          <h6 class="purple-text ml-auto">8min</h6>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-top">
+        <img src="images/thumbnail_2.jpg" alt="Video Thumbnail">
+        <img src="images/play.png" alt="Play Button" class="play-button">
+      </div>
+      <div class="card-body" style="flex: 0 0 auto;">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer" style="flex: 1;">
+        <div class="row">
+          <img src="images/profile_1.jpg" alt="tiny profile" style="height: 20px;" class="mx-3 rounded-circle">
+          <h6 class="purple-text">Phillip Massey</h6>
+        </div>
+        <!-- stars -->
+        <div class="row mx-0">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_off.png" height="15px" width="15px">
+          <h6 class="purple-text ml-auto">8min</h6>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-top">
+        <img src="images/thumbnail_3.jpg" alt="Video Thumbnail">
+        <img src="images/play.png" alt="Play Button" class="play-button">
+      </div>
+      <div class="card-body" style="flex: 0 0 auto;">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer" style="flex: 1;">
+        <div class="row">
+          <img src="images/profile_1.jpg" alt="tiny profile" style="height: 20px;" class="mx-3 rounded-circle">
+          <h6 class="purple-text">Phillip Massey</h6>
+        </div>
+        <!-- stars -->
+        <div class="row mx-0">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_on.png" height="15px" width="15px">
+          <img src="images/star_off.png" height="15px" width="15px">
+          <h6 class="purple-text ml-auto">8min</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('resize', function() {
+      var maxHeight = 0;
+      var cardBodies = document.querySelectorAll('.card-body');
+      cardBodies.forEach(function(cardBody) {
+        cardBody.style.height = 'auto';
+        maxHeight = Math.max(maxHeight, cardBody.offsetHeight);
+      });
+      cardBodies.forEach(function(cardBody) {
+        cardBody.style.height = maxHeight + 'px';
+      });
+    });
+
+    window.dispatchEvent(new Event('resize'));
+  </script>
+
+</body>
+</html>

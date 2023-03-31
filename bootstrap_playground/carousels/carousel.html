@@ -37,12 +37,14 @@
           let cards = '';
           data.forEach((item, index) => {
             cards += `
-              <div class="h-100 col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4">
                 <div class="card">
                   <img src="${item.thumb_url}" class="card-img-top" alt="${item.title}">
                   <div class="card-body">
                     <h5 class="card-title">${item.title}</h5>
                     <h6>${item['sub-title']}</h6>
+                  </div>
+                  <div class="card-footer bg-transparent">
                     <p>By ${item.author}</p>
                     <p>${item.duration}</p>
                   </div>

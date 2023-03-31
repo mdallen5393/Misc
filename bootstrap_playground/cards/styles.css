@@ -51,50 +51,29 @@
     100% { transform: rotate(360deg); }
 }
 
-
-/* slick stuff */
-
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  color: #333;
-  transform: translateY(-50%);
+.card {
+	border: none;
+}
+.card-footer {
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
 }
 
-.slick-prev {
-  background: url('./images/arrow_black_left.png') no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: none;
+/* Get playbutton to work */
+.card-img-top {
+    position: relative;
 }
 
-.slick-next {
-  background: url('./images/arrow_black_right.png') no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: none;
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 25%;
+	height: auto;
 }
 
-/* .slick-prev:before,
-.slick-next:before {
-  
-} */
-
-.slick-prev {
-  left: 0;
-  font-size: 0;
-  width: 29px;
-  height: 62px;
-  background-color:rgba(0, 0, 0, 0.0);
+.card-img-top img {
+    max-width: 100%;
+    height: auto;
 }
-
-.slick-next {
-  right: 0;
-  font-size: 0;
-  width: 29px;
-  height: 62px;
-  background-color:rgba(0, 0, 0, 0.0);
-}
-
