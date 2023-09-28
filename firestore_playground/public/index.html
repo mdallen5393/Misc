@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    import { getFirestore } from "firebase/firestore";
+    import { getAuth } from "firebase/auth";
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA8QqHYj8YGMLXtUVSTTMlZFkb6hHxg2WQ",
+      authDomain: "holbytest-3f29a.firebaseapp.com",
+      projectId: "holbytest-3f29a",
+      storageBucket: "holbytest-3f29a.appspot.com",
+      messagingSenderId: "79708549371",
+      appId: "1:79708549371:web:665793e08da8944789805e",
+      measurementId: "G-GFH82L8YGY"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    // Initialize Firebase Authentication and get a reference to the service
+    const auth = getAuth(app);
+    
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

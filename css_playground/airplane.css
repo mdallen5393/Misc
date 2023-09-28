@@ -1,0 +1,10 @@
+#custom-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('./jet-icon-33493-Windows.ico') no-repeat;
+    pointer-events: none;
+}
+body {
+    cursor: none;
+}
