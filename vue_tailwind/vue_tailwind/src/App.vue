@@ -1,5 +1,4 @@
 <script setup>
-import draggable from 'vuedraggable';
 import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
 
